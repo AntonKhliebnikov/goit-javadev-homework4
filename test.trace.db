@@ -1,0 +1,154 @@
+2023-03-01 00:08:13 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at Database.<init>(Database.java:11)
+	at Database.<clinit>(Database.java:6)
+	at DatabaseQueryService.maxSalaryCountWorkers(DatabaseQueryService.java:52)
+	at DatabaseQueryService.main(DatabaseQueryService.java:14)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 15 more
+2023-03-01 00:08:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 00:10:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 00:12:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 00:12:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "PROJECTGROUP" не найдена
+Table "PROJECTGROUP" not found; SQL statement:
+SELECT client_id, COUNT(id) FROM projectGROUP BY client_idHAVING COUNT(id) IN(  SELECT COUNT(id) FROM project  GROUP BY client_id  ORDER BY COUNT(id) DESC  LIMIT 1); [42102-214]
+2023-03-01 00:14:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT client_id, COUNT(id) FROM project GROUP BY client_idHAVING [*]COUNT(id) IN(  SELECT COUNT(id) FROM project  GROUP BY client_id  ORDER BY COUNT(id) DESC  LIMIT 1);"
+Syntax error in SQL statement "SELECT client_id, COUNT(id) FROM project GROUP BY client_idHAVING [*]COUNT(id) IN(  SELECT COUNT(id) FROM project  GROUP BY client_id  ORDER BY COUNT(id) DESC  LIMIT 1);"; SQL statement:
+SELECT client_id, COUNT(id) FROM project GROUP BY client_idHAVING COUNT(id) IN(  SELECT COUNT(id) FROM project  GROUP BY client_id  ORDER BY COUNT(id) DESC  LIMIT 1); [42000-214]
+2023-03-01 00:14:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "name" не найден
+Column "name" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:38)
+	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+2023-03-01 00:18:15 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
+	at Database.<init>(Database.java:11)
+	at Database.<clinit>(Database.java:6)
+	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:24)
+	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 15 more
+2023-03-01 00:18:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "COUNT" не найден
+Column "COUNT" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:39)
+	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+2023-03-01 00:34:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 00:35:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 00:35:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "PROJECTWHERE" не найдена
+Table "PROJECTWHERE" not found; SQL statement:
+SELECT CONCAT('Project ', id) AS name, DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM projectWHERE DATEDIFF(MONTH, start_date, finish_date) = SELECT DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM projectORDER BY month_count DESCLIMIT 1; [42102-214]
+2023-03-01 00:36:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "PROJECTORDER" не найдена
+Table "PROJECTORDER" not found; SQL statement:
+SELECT CONCAT('Project ', id) AS name, DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project WHERE DATEDIFF(MONTH, start_date, finish_date) = SELECT DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM projectORDER BY month_count DESCLIMIT 1; [42102-214]
+2023-03-01 00:36:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT CONCAT('Project ', id) AS name, DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project WHERE DATEDIFF(MONTH, start_date, finish_date) = SELECT DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project ORDER BY month_count [*]DESCLIMIT 1;"
+Syntax error in SQL statement "SELECT CONCAT('Project ', id) AS name, DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project WHERE DATEDIFF(MONTH, start_date, finish_date) = SELECT DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project ORDER BY month_count [*]DESCLIMIT 1;"; SQL statement:
+SELECT CONCAT('Project ', id) AS name, DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project WHERE DATEDIFF(MONTH, start_date, finish_date) = SELECT DATEDIFF(MONTH, start_date, finish_date) AS month_count FROM project ORDER BY month_count DESCLIMIT 1; [42000-214]
+2023-03-01 00:37:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "mounth_count" не найден
+Column "mounth_count" not found [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.longestProjects(DatabaseQueryService.java:42)
+	at DatabaseQueryService.main(DatabaseQueryService.java:19)
+2023-03-01 00:50:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT type, name, birthday FROM (\0009 SELECT 'YOUNGEST' AS type, name, birthday FROM worker     ORDER BY birthday DESC     LIMIT 1)UNIONSELECT [*]type, name, BIRTHDAY FROM (\0009 SELECT 'OLDEST' AS type, name, birthday FROM worker     ORDER BY birthday ASC     LIMIT 1);"
+Syntax error in SQL statement "SELECT type, name, birthday FROM (\0009 SELECT 'YOUNGEST' AS type, name, birthday FROM worker     ORDER BY birthday DESC     LIMIT 1)UNIONSELECT [*]type, name, BIRTHDAY FROM (\0009 SELECT 'OLDEST' AS type, name, birthday FROM worker     ORDER BY birthday ASC     LIMIT 1);"; SQL statement:
+SELECT type, name, birthday FROM (	 SELECT 'YOUNGEST' AS type, name, birthday FROM worker     ORDER BY birthday DESC     LIMIT 1)UNIONSELECT type, name, BIRTHDAY FROM (	 SELECT 'OLDEST' AS type, name, birthday FROM worker     ORDER BY birthday ASC     LIMIT 1); [42000-214]
+2023-03-01 01:01:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "PROJECTJOIN" не найдена
+Table "PROJECTJOIN" not found; SQL statement:
+SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM projectJOIN project_worker ON project.id = project_worker.project_idJOIN worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC; [42102-214]
+2023-03-01 01:01:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_idJOIN [*]worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC;"
+Syntax error in SQL statement "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_idJOIN [*]worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC;"; SQL statement:
+SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_idJOIN worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC; [42000-214]
+2023-03-01 01:02:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP [*]BY project.idORDER BY price DESC;"
+Syntax error in SQL statement "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP [*]BY project.idORDER BY price DESC;"; SQL statement:
+SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC; [42000-214]
