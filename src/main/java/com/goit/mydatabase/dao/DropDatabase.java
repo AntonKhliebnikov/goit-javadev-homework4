@@ -1,3 +1,7 @@
+package com.goit.mydatabase.dao;
+
+import com.goit.mydatabase.dao.Database;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

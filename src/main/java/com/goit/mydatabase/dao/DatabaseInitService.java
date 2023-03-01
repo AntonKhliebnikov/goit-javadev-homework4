@@ -1,3 +1,7 @@
+package com.goit.mydatabase.dao;
+
+import com.goit.mydatabase.dao.Database;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,10 +9,10 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DatabasePopulateService {
+public class DatabaseInitService {
     public static void main(String[] args) {
         try (Connection connection = Database.getInstance().getConnection();
-             BufferedReader reader = new BufferedReader(new FileReader("populate_db.sql"))) {
+             BufferedReader reader = new BufferedReader(new FileReader("sql/init_db.sql"))) {
             String line;
             StringBuilder sb = new StringBuilder();
 

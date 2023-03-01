@@ -9,7 +9,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/An
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
 	at org.h2.mvstore.db.Store.<init>(Store.java:136)
-	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.service.Database.<init>(service.Database.java:324)
 	at org.h2.engine.Engine.openSession(Engine.java:92)
 	at org.h2.engine.Engine.openSession(Engine.java:222)
 	at org.h2.engine.Engine.createSession(Engine.java:201)
@@ -18,10 +18,10 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/An
 	at org.h2.Driver.connect(Driver.java:59)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
-	at Database.<init>(Database.java:11)
-	at Database.<clinit>(Database.java:6)
-	at DatabaseQueryService.maxSalaryCountWorkers(DatabaseQueryService.java:52)
-	at DatabaseQueryService.main(DatabaseQueryService.java:14)
+	at service.Database.<init>(service.Database.java:11)
+	at service.Database.<clinit>(service.Database.java:6)
+	at service.DatabaseQueryService.maxSalaryCountWorkers(service.DatabaseQueryService.java:52)
+	at service.DatabaseQueryService.main(service.DatabaseQueryService.java:14)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
@@ -59,8 +59,8 @@ Column "name" not found [42122-214]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
 	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
-	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:38)
-	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+	at service.DatabaseQueryService.maxProjectCountClients(service.DatabaseQueryService.java:38)
+	at service.DatabaseQueryService.main(service.DatabaseQueryService.java:16)
 2023-03-01 00:18:15 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
@@ -72,7 +72,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/An
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
 	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
 	at org.h2.mvstore.db.Store.<init>(Store.java:136)
-	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.service.Database.<init>(service.Database.java:324)
 	at org.h2.engine.Engine.openSession(Engine.java:92)
 	at org.h2.engine.Engine.openSession(Engine.java:222)
 	at org.h2.engine.Engine.createSession(Engine.java:201)
@@ -81,10 +81,10 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/An
 	at org.h2.Driver.connect(Driver.java:59)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
-	at Database.<init>(Database.java:11)
-	at Database.<clinit>(Database.java:6)
-	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:24)
-	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+	at service.Database.<init>(service.Database.java:11)
+	at service.Database.<clinit>(service.Database.java:6)
+	at service.DatabaseQueryService.maxProjectCountClients(service.DatabaseQueryService.java:24)
+	at service.DatabaseQueryService.main(service.DatabaseQueryService.java:16)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Anton Khliebnikov/IdeaProjects/goit-javadev-homework4/test.mv.db [2.1.214/7]" [50000-214]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
@@ -105,8 +105,8 @@ Column "COUNT" not found [42122-214]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at DatabaseQueryService.maxProjectCountClients(DatabaseQueryService.java:39)
-	at DatabaseQueryService.main(DatabaseQueryService.java:16)
+	at service.DatabaseQueryService.maxProjectCountClients(service.DatabaseQueryService.java:39)
+	at service.DatabaseQueryService.main(service.DatabaseQueryService.java:16)
 2023-03-01 00:34:35 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
 The object is already closed [90007-214]
@@ -134,8 +134,8 @@ Column "mounth_count" not found [42122-214]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at DatabaseQueryService.longestProjects(DatabaseQueryService.java:42)
-	at DatabaseQueryService.main(DatabaseQueryService.java:19)
+	at service.DatabaseQueryService.longestProjects(service.DatabaseQueryService.java:42)
+	at service.DatabaseQueryService.main(service.DatabaseQueryService.java:19)
 2023-03-01 00:50:08 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT type, name, birthday FROM (\0009 SELECT 'YOUNGEST' AS type, name, birthday FROM worker     ORDER BY birthday DESC     LIMIT 1)UNIONSELECT [*]type, name, BIRTHDAY FROM (\0009 SELECT 'OLDEST' AS type, name, birthday FROM worker     ORDER BY birthday ASC     LIMIT 1);"
 Syntax error in SQL statement "SELECT type, name, birthday FROM (\0009 SELECT 'YOUNGEST' AS type, name, birthday FROM worker     ORDER BY birthday DESC     LIMIT 1)UNIONSELECT [*]type, name, BIRTHDAY FROM (\0009 SELECT 'OLDEST' AS type, name, birthday FROM worker     ORDER BY birthday ASC     LIMIT 1);"; SQL statement:
@@ -152,3 +152,15 @@ SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MON
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP [*]BY project.idORDER BY price DESC;"
 Syntax error in SQL statement "SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP [*]BY project.idORDER BY price DESC;"; SQL statement:
 SELECT CONCAT('Project ', project.id) AS name, SUM(worker.salary) * DATEDIFF(MONTH, project.start_date, project.finish_date) AS price FROM project JOIN project_worker ON project.id = project_worker.project_id JOIN worker ON worker.id = project_worker.worker_idGROUP BY project.idORDER BY price DESC; [42000-214]
+2023-03-01 21:38:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 21:38:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 21:38:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-03-01 21:38:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]

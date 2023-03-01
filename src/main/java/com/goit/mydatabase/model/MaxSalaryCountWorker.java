@@ -1,3 +1,5 @@
+package com.goit.mydatabase.model;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
