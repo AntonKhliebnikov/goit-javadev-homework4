@@ -1,6 +1,6 @@
 package com.goit.mydatabase.service;
 
-import com.goit.mydatabase.dao.Database;
+import com.goit.mydatabase.storage.Database;
 import com.goit.mydatabase.model.*;
 
 import java.io.BufferedReader;

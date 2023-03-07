@@ -1,6 +1,6 @@
-package com.goit.mydatabase.dao;
+package com.goit.mydatabase.service;
 
-import com.goit.mydatabase.dao.Database;
+import com.goit.mydatabase.storage.Database;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -26,6 +26,7 @@ public class DatabasePopulateService {
             for (String query : queries) {
                 statement.executeUpdate(query);
             }
+            statement.close();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }

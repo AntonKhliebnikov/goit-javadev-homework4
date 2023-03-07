@@ -1,4 +1,4 @@
-package com.goit.mydatabase.dao;
+package com.goit.mydatabase.storage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

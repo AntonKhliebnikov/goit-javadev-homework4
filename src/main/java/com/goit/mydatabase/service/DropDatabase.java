@@ -1,6 +1,6 @@
-package com.goit.mydatabase.dao;
+package com.goit.mydatabase.service;
 
-import com.goit.mydatabase.dao.Database;
+import com.goit.mydatabase.storage.Database;
 
 import java.sql.Connection;
 import java.sql.SQLException;
