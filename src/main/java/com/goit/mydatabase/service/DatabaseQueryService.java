@@ -21,7 +21,7 @@ public class DatabaseQueryService {
 
     public List<ProjectPrices> projectPrices() {
         List<ProjectPrices> result = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("sql/print_project_prices.sql"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/print_project_prices.sql"));
              Connection connection = Database.getInstance().getConnection();
              Statement st = connection.createStatement()) {
 
@@ -49,7 +49,7 @@ public class DatabaseQueryService {
 
     public List<YoungestEldestWorkers> youngestEldestWorkers() {
         List<YoungestEldestWorkers> result = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("sql/find_youngest_eldest_workers.sql"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/find_youngest_eldest_workers.sql"));
              Connection connection = Database.getInstance().getConnection();
              Statement st = connection.createStatement()) {
 
@@ -79,7 +79,7 @@ public class DatabaseQueryService {
     public List<LongestProject> longestProjects() {
         List<LongestProject> result = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("sql/find_longest_project.sql"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/find_longest_project.sql"));
              Connection connection = Database.getInstance().getConnection();
              Statement st = connection.createStatement()) {
 
@@ -108,7 +108,7 @@ public class DatabaseQueryService {
     public List<MaxProjectCountClient> maxProjectCountClients() {
         List<MaxProjectCountClient> result = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("sql/find_max_projects_client.sql"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/find_max_projects_client.sql"));
              Connection connection = Database.getInstance().getConnection();
              Statement st = connection.createStatement()) {
 
@@ -137,7 +137,7 @@ public class DatabaseQueryService {
     public List<MaxSalaryCountWorker> maxSalaryCountWorkers() {
         List<MaxSalaryCountWorker> result = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("sql/find_max_salary_worker.sql"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/find_max_salary_worker.sql"));
              Connection connection = Database.getInstance().getConnection();
              Statement st = connection.createStatement()) {
 

@@ -10,7 +10,7 @@ public class Database {
 
     private Database() {
         try {
-            connection = DriverManager.getConnection("jdbc:h2:./test");
+            connection = DriverManager.getConnection("jdbc:h2:./dbhw5");
         } catch (SQLException e) {
             e.printStackTrace();
         }

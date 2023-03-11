@@ -6,3 +6,5 @@ build/
 *.ipr
 gradlew
 gradlew.bat
+dbhw5.mv.db
+dbhw5.trace.db

@@ -24,8 +24,9 @@ public class DatabasePopulateService {
             Statement statement = connection.createStatement();
 
             for (String query : queries) {
-                statement.executeUpdate(query);
+                statement.addBatch(query);
             }
+            statement.executeBatch();
             statement.close();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
