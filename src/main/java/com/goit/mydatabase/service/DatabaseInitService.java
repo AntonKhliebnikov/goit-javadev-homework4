@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class DatabaseInitService {
     public static void main(String[] args) {
         try (Connection connection = Database.getInstance().getConnection();
-             BufferedReader reader = new BufferedReader(new FileReader("sql/init_db.sql"))) {
+             BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/sql/init_db.sql"))) {
             String line;
             StringBuilder sb = new StringBuilder();
 

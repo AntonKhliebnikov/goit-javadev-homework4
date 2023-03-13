@@ -14,7 +14,5 @@ public class DropDatabase {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
 }

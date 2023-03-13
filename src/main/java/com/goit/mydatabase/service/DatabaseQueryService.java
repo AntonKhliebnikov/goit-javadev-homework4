@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseQueryService {
-    public static void main(String[] args) {
-        List<ProjectPrices> projectPrices = new DatabaseQueryService().projectPrices();
-        System.out.println(projectPrices);
-    }
 
     public List<ProjectPrices> projectPrices() {
         List<ProjectPrices> result = new ArrayList<>();
