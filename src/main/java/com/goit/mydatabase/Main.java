@@ -1,13 +1,15 @@
 package com.goit.mydatabase;
 
-import com.goit.mydatabase.model.ProjectPrices;
-import com.goit.mydatabase.service.DatabaseQueryService;
-
-import java.util.List;
+import com.goit.mydatabase.service.ClientService;
+import org.flywaydb.core.Flyway;
 
 public class Main {
     public static void main(String[] args) {
-        List<ProjectPrices> projectPrices = new DatabaseQueryService().projectPrices();
-        System.out.println(projectPrices);
+
+        Flyway flyway = Flyway.configure().dataSource("jdbc:h2:./dbhw5", "", "").load();
+        flyway.migrate();
+
+        ClientService clientService = new ClientService();
+        clientService.listAll().forEach(System.out::println);
     }
 }

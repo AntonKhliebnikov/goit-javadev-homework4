@@ -1,7 +1,7 @@
 package com.goit.mydatabase.service;
 
 import com.goit.mydatabase.storage.Database;
-import com.goit.mydatabase.model.*;
+import com.goit.mydatabase.entity.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

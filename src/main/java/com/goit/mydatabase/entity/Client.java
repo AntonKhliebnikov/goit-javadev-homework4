@@ -1,13 +1,13 @@
-package com.goit.mydatabase.model;
+package com.goit.mydatabase.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class ProjectPrices {
+@AllArgsConstructor
+public class Client {
+    private long id;
     private String name;
-    private int price;
 }

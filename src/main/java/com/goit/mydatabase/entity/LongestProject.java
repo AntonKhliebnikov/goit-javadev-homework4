@@ -1,4 +1,4 @@
-package com.goit.mydatabase.model;
+package com.goit.mydatabase.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class YoungestEldestWorkers {
-    private String type;
+public class LongestProject {
     private String name;
-    private String birthday;
-
+    private int monthCount;
 }

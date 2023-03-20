@@ -1,4 +1,4 @@
-package com.goit.mydatabase.model;
+package com.goit.mydatabase.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MaxSalaryCountWorker {
+public class YoungestEldestWorkers {
+    private String type;
     private String name;
-    private int salary;
+    private String birthday;
 
 }
